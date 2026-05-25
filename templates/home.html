@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+
+<h2>Home Page</h2>
+
+<p>Name: {{ name }}</p>
+
+<p>Uppercase: {{ name|upper }}</p>
+
+<p>Course: {{ course|title }}</p>
+
+<h3>Skills</h3>
+
+<ul>
+{% for skill in skills %}
+    <li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
